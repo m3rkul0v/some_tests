@@ -14,14 +14,10 @@ while True:
             sys.exit()
 
         if event.type == pygame.KEYDOWN:
-            button_pressed_time = pygame.time.get_ticks()
-            screen.fill((255, 255, 255))
-
-
-    current_time = pygame.time.get_ticks()
-
-    if current_time - button_pressed_time > 2000:
-        screen.fill((0, 0, 0))
+            if event.key == pygame.K_g:
+                screen.fill((0, 128, 0))
+            if event.key == pygame.K_p:
+                screen.fill((128,0,128))
 
     pygame.display.flip()
     clock.tick(60)
